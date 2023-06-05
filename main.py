@@ -5,7 +5,7 @@ def speech_recognition(model='base'):
     """ Recognizes speech from an audio file passed to it """
 
     speech_model = whisper.load_model(model)
-    result = speech_model.transcribe('miyagi_-_samuray.mp3', fp16=False)
+    result = speech_model.transcribe('YOUR_AUDIO_FILE', fp16=False)
 
     # write the recognized speech to a text file
     with open(f'transcription_{model}.txt', 'w') as file:
